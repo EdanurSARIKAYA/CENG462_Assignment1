@@ -41,7 +41,8 @@ public class Player2Movement : MonoBehaviour
             Jump();
         }
 
-        animator.SetBool("run", moveInput != 0);
+        //Set animator parameters
+        animator.SetBool("walk", moveInput != 0);
         animator.SetBool("grounded", grounded);
     }
 
