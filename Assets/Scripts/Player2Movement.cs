@@ -19,7 +19,16 @@ public class Player2Movement : MonoBehaviour
     void Update()
     {
         float moveInput = 0f;
-
+                if (transform.position.x > 13.6f)
+        {
+            transform.position = new Vector3(13.6f, transform.position.y, transform.position.z);
+            // Karakteri sol sınırı
+        }
+        else if (transform.position.x < 1.14f)
+        {
+            transform.position = new Vector3(1.14f, transform.position.y, transform.position.z);
+            // Karakteri sağ sınırı
+        }
         // Sağa gitme
         if (Input.GetKey(KeyCode.RightArrow))
         {

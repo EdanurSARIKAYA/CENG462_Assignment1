@@ -54,11 +54,19 @@ public class launcher : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    void FireProjectile()
-    {
-        Transform projectile = Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
-        projectile.GetComponent<Rigidbody2D>().velocity = velocity;
-    }
+ void FireProjectile()
+{
+    Transform projectile = Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
+    Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
+    projectileRigidbody.velocity = velocity;
+
+    // Nesneye bir tag atayarak, duvara çarpma veya zemine temas algılama
+    projectile.tag = "Projectile";
+
+    // Nesneye ait OnCollisionEnter2D fonksiyonunu tetiklemek için bu script'e eklenmesi
+    projectile.gameObject.AddComponent<ProjectileCollision>();
+}
+
 
     void ClearTrajectory()
     {
