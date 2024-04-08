@@ -26,7 +26,7 @@ public class launcher : MonoBehaviour
             DrawTrajectory();
         }
 
-        if(Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0))
         {
             FireProjectile();
             ClearTrajectory();
@@ -44,6 +44,11 @@ public class launcher : MonoBehaviour
             positions[i] = pos;
         }
 
+        lineRenderer.sortingLayerName = "Default"; 
+        lineRenderer.sortingOrder = 3; // Order in layer değerini 3 olarak ayarla
+        lineRenderer.startColor = Color.black; // Başlangıç rengini siyah yap
+        lineRenderer.endColor = Color.black; // Bitiş rengini siyah yap
+
         lineRenderer.positionCount = trajectoryStepCount;
         lineRenderer.SetPositions(positions);
     }
@@ -54,18 +59,18 @@ public class launcher : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
- void FireProjectile()
-{
-    Transform projectile = Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
-    Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
-    projectileRigidbody.velocity = velocity;
+    void FireProjectile()
+    {
+        Transform projectile = Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
+        Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
+        projectileRigidbody.velocity = velocity;
 
-    // Nesneye bir tag atayarak, duvara çarpma veya zemine temas algılama
-    projectile.tag = "Projectile";
+        // Nesneye bir tag atayarak, duvara çarpma veya zemine temas algılama
+        projectile.tag = "Projectile";
 
-    // Nesneye ait OnCollisionEnter2D fonksiyonunu tetiklemek için bu script'e eklenmesi
-    projectile.gameObject.AddComponent<ProjectileCollision>();
-}
+        // Nesneye ait OnCollisionEnter2D fonksiyonunu tetiklemek için bu script'e eklenmesi
+        projectile.gameObject.AddComponent<ProjectileCollision>();
+    }
 
 
     void ClearTrajectory()
