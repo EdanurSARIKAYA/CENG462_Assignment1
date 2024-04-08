@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth2 : MonoBehaviour
 {
-	public GameManagerScript gameManager;
+	public GameManager gameManager;
 	public int maxHealth = 100;
 	public int currentHealth;
 	public HealthBar healthBar;
