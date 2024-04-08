@@ -2611,8 +2611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 350, y: 200}
-  m_SizeDelta: {x: 120, y: 25}
+  m_AnchoredPosition: {x: 400, y: 400}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074109638
 MonoBehaviour:
@@ -2798,7 +2798,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: -0.6000061, y: 1.0657}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1114397550
 MonoBehaviour:
@@ -3283,7 +3283,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: -0.6000061, y: 1.0657}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 60, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1297406285
 MonoBehaviour:
@@ -3815,7 +3815,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb0b38cde293284f906961c9f9b29d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverUI: {fileID: 2010194400}
 --- !u!4 &1490307044
 Transform:
   m_ObjectHideFlags: 0
@@ -4449,8 +4448,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 200}
-  m_SizeDelta: {x: 120, y: 25}
+  m_AnchoredPosition: {x: -400, y: 400}
+  m_SizeDelta: {x: 250, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2036387559
 MonoBehaviour:
