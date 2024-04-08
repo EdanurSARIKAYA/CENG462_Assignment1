@@ -12,7 +12,7 @@ public class launcher : MonoBehaviour
 
     Vector2 velocity, startMousePos, currentMousePos;
 
-    private void Update()
+    void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -26,11 +26,11 @@ public class launcher : MonoBehaviour
             DrawTrajectory();
         }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            FireProjectile();
-            ClearTrajectory();
-        }
+        // if (Input.GetMouseButtonUp(0))
+        // {
+        //     FireProjectile();
+        //     ClearTrajectory();
+        // }
     }
 
     void DrawTrajectory()
@@ -59,7 +59,7 @@ public class launcher : MonoBehaviour
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
-    void FireProjectile()
+    public void FireProjectile()
     {
         Transform projectile = Instantiate(projectilePrefab, spawnPoint.position, Quaternion.identity);
         Rigidbody2D projectileRigidbody = projectile.GetComponent<Rigidbody2D>();
@@ -73,7 +73,7 @@ public class launcher : MonoBehaviour
     }
 
 
-    void ClearTrajectory()
+    public void ClearTrajectory()
     {
         lineRenderer.positionCount = 0;
     }
