@@ -19,6 +19,11 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 
+    public void quitGame()
+    {
+        Application.Quit();
+    }
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Sol tıklandığında
