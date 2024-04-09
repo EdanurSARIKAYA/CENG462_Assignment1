@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     public void settingsMenu()
     {
-        SceneManager.LoadScene("SettingsMenu");
+        SceneManager.LoadScene("Settings");
     }
 
     public void quitGame()
