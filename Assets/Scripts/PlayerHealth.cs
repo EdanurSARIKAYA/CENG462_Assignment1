@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
         {
             // Player has no health left, trigger game over
             isDead = true;
-            gameManager.GameOver(); // only call once
+            gameManager.ChangeScene(); // only call once
             Debug.Log("Dead");
         }
     }
