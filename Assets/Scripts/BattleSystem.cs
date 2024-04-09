@@ -17,9 +17,11 @@ public class BattleSystem : MonoBehaviour
 
     void SetupBattle()
     {
-        state = BattleState.PLAYER1TURN;
-        player1.GetComponent<launcher>().enabled = true;
+         state = BattleState.PLAYER1TURN;
         player2.GetComponent<launcher>().enabled = false;
+        player2.GetComponent<Player2Movement>().enabled = false;
+        player1.GetComponent<launcher>().enabled = true;
+        player1.GetComponent<PlayerMovement>().enabled = true;
     }
 
     void Update()
