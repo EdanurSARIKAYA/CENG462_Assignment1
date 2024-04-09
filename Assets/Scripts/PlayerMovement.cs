@@ -20,9 +20,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         float moveInput = 0f;
-        if (transform.position.x < -10.5f)
+        if (transform.position.x < -8.0f)
         {
-            transform.position = new Vector3(-10.5f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-8.0f, transform.position.y, transform.position.z);
             // Karakteri sol sınırı
         }
         else if (transform.position.x > -1.10f)
