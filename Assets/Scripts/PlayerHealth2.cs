@@ -6,7 +6,7 @@ public class PlayerHealth2 : MonoBehaviour
 	public int maxHealth = 120;
 	public int currentHealth;
 	public HealthBar healthBar;
-	private bool isDead;
+	public bool isDead;
     void Start()
     {
 		currentHealth = maxHealth;

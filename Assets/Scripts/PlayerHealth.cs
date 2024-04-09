@@ -3,18 +3,15 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public GameManager gameManager;
-    
     public int maxHealth = 120;
     public int currentHealth;
     public HealthBar healthBar;
-    private bool isDead;
+    public bool isDead;
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-
-
 
     public void TakeDamage(int damage)
     {
