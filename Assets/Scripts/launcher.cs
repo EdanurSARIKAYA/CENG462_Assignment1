@@ -27,11 +27,11 @@ public class launcher : MonoBehaviour
             DrawTrajectory();
         }
 
-         if (Input.GetMouseButtonUp(0))
-         {
-             FireProjectile();
-             ClearTrajectory();
-        }
+         // if (Input.GetMouseButtonUp(0))
+        // {
+        //     FireProjectile();
+        //     ClearTrajectory();
+        // }
     }
 
     void DrawTrajectory()
