@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class launcher : MonoBehaviour
 {
@@ -26,11 +27,11 @@ public class launcher : MonoBehaviour
             DrawTrajectory();
         }
 
-        // if (Input.GetMouseButtonUp(0))
-        // {
-        //     FireProjectile();
-        //     ClearTrajectory();
-        // }
+         if (Input.GetMouseButtonUp(0))
+         {
+             FireProjectile();
+             ClearTrajectory();
+        }
     }
 
     void DrawTrajectory()
@@ -44,10 +45,20 @@ public class launcher : MonoBehaviour
             positions[i] = pos;
         }
 
+        string sceneName = SceneManager.GetActiveScene().name;
+
+          if (sceneName == "Level2")
+        {
+            lineRenderer.startColor = Color.white;
+            lineRenderer.endColor = Color.white;
+        }
+        else
+        {
+            lineRenderer.startColor = Color.black;
+            lineRenderer.endColor = Color.black;
+        }
         lineRenderer.sortingLayerName = "Default"; 
         lineRenderer.sortingOrder = 3; // Order in layer değerini 3 olarak ayarla
-        lineRenderer.startColor = Color.black; // Başlangıç rengini siyah yap
-        lineRenderer.endColor = Color.black; // Bitiş rengini siyah yap
 
         lineRenderer.positionCount = trajectoryStepCount;
         lineRenderer.SetPositions(positions);

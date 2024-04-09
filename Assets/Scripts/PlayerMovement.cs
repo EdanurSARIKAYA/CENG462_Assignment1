@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private bool grounded;
+    private float jumpForce = 20f;
 
     void Start()
     {
@@ -29,6 +30,12 @@ public class PlayerMovement : MonoBehaviour
             transform.position = new Vector3(-1.10f, transform.position.y, transform.position.z);
             // Karakteri sağ sınırı
         }
+
+         if (transform.position.y > 4.2f)
+    {
+        transform.position = new Vector3(transform.position.x, 4.2f, transform.position.z);
+    }
+
         // Sağa gitme
         if (Input.GetKey(KeyCode.D))
         {
@@ -56,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        body.velocity = new Vector2(body.velocity.x, moveSpeed);
+        body.velocity = new Vector2(body.velocity.x, jumpForce);
         animator.SetTrigger("jump");
         grounded = false; // Zıplama yapıldığında yerde değiliz
     }
