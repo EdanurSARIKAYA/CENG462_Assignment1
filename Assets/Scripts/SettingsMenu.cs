@@ -6,6 +6,11 @@ public class SettingsMenu : MonoBehaviour
     [SerializeField] AudioSource music;
     private bool muted = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     void Start()
     {
         Load();
@@ -35,17 +40,6 @@ public class SettingsMenu : MonoBehaviour
         muted = true;
         music.Stop();
         Save();
-    }
-
-    // Geri butonu - Ana menüye dön
-    public void BackButton()
-    {
-        SceneManager.LoadScene("Start");
-    }
-
-    public void quitGame()
-    {
-        Application.Quit();
     }
     // Ayarları yükle
     private void Load()
