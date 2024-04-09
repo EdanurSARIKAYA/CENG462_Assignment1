@@ -9,7 +9,7 @@ public class Player2Movement : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool grounded;
 
-    public float jumpForce = 20f; // Zıplama hızı
+    public float jumpForce = 15f; // Zıplama hızı
 
 
     void Start()

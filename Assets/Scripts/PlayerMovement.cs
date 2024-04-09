@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private bool grounded;
-    private float jumpForce = 20f;
+    private float jumpForce = 15f;
 
     void Start()
     {
