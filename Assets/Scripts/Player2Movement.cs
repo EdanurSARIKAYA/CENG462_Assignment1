@@ -78,7 +78,7 @@ public class Player2Movement : MonoBehaviour
         {
             grounded = true; // Yere temas ettiğimizde grounded'ı true yap
         }
-        if (collision.gameObject.CompareTag("OneWayPlatform"))
+        if (collision.gameObject.CompareTag("OneWayPlatform2"))
         {
             grounded = true; // Yere temas ettiğimizde grounded'ı true yap
         }

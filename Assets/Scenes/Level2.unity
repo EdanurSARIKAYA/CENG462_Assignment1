@@ -526,7 +526,7 @@ Transform:
   m_GameObject: {fileID: 190390851}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 0.21, z: 0}
+  m_LocalPosition: {x: 0.75, y: -0.14, z: 0}
   m_LocalScale: {x: 0.22422662, y: 0.24505234, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2043,7 +2043,7 @@ Transform:
   m_GameObject: {fileID: 613610321}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4, y: 4.7, z: 0}
+  m_LocalPosition: {x: -1.61, y: 4.3, z: 0}
   m_LocalScale: {x: 0.22422662, y: 0.24505234, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4342,7 +4342,7 @@ GameObject:
   - component: {fileID: 1197912329}
   m_Layer: 3
   m_Name: Platform (1)
-  m_TagString: OneWayPlatform
+  m_TagString: OneWayPlatform2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5056,7 +5056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 20
+  jumpForce: 15
 --- !u!114 &1285484316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5095,7 +5095,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1285484305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc0107a377eb03140b306c49898c929b, type: 3}
+  m_Script: {fileID: 11500000, guid: d877cbc15e182b4449981626331ab365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 1285484312}
@@ -6025,7 +6025,7 @@ GameObject:
   - component: {fileID: 1506567043}
   m_Layer: 3
   m_Name: Platform (9)
-  m_TagString: OneWayPlatform
+  m_TagString: OneWayPlatform2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6209,7 +6209,7 @@ GameObject:
   - component: {fileID: 1638858101}
   m_Layer: 3
   m_Name: Platform (11)
-  m_TagString: OneWayPlatform
+  m_TagString: OneWayPlatform2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6393,7 +6393,7 @@ GameObject:
   - component: {fileID: 1716242775}
   m_Layer: 3
   m_Name: Platform (3)
-  m_TagString: OneWayPlatform
+  m_TagString: OneWayPlatform2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7043,7 +7043,7 @@ GameObject:
   - component: {fileID: 1926153537}
   m_Layer: 3
   m_Name: Platform (12)
-  m_TagString: OneWayPlatform
+  m_TagString: OneWayPlatform2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

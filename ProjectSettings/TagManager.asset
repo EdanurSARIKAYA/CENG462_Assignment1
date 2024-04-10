@@ -9,6 +9,7 @@ TagManager:
   - GameOver
   - OneWayPlatform
   - Wall
+  - OneWayPlatform2
   layers:
   - Default
   - TransparentFX
