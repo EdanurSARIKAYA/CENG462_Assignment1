@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayerOneWayPlatform : MonoBehaviour
+public class Player2OneWayPlatform : MonoBehaviour
 {
     private GameObject currentOneWayPlatform;
 
@@ -9,7 +9,7 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             if (currentOneWayPlatform != null)
             {
@@ -20,7 +20,7 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("OneWayPlatform"))
+        if (collision.gameObject.CompareTag("OneWayPlatform2"))
         {
             currentOneWayPlatform = collision.gameObject;
         }
@@ -28,7 +28,7 @@ public class PlayerOneWayPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("OneWayPlatform"))
+        if (collision.gameObject.CompareTag("OneWayPlatform2"))
         {
             currentOneWayPlatform = null;
         }
