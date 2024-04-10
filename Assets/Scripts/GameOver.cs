@@ -15,7 +15,8 @@ public class GameOver : MonoBehaviour
         SceneManager.LoadScene("Start");
     }
 
-    public void gameOver(){
+    public void gameOver()
+    {
         SceneManager.LoadScene("GameOver");
     }
 

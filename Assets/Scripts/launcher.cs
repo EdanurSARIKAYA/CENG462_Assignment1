@@ -13,6 +13,9 @@ public class launcher : MonoBehaviour
 
     Vector2 velocity, startMousePos, currentMousePos;
 
+    public delegate void ProjectileFiredEventHandler();
+    public static event ProjectileFiredEventHandler OnProjectileFired;
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -27,10 +30,11 @@ public class launcher : MonoBehaviour
             DrawTrajectory();
         }
 
-         // if (Input.GetMouseButtonUp(0))
+        // if (Input.GetMouseButtonUp(0))
         // {
         //     FireProjectile();
         //     ClearTrajectory();
+        //     OnProjectileFired?.Invoke();
         // }
     }
 
@@ -47,7 +51,7 @@ public class launcher : MonoBehaviour
 
         string sceneName = SceneManager.GetActiveScene().name;
 
-          if (sceneName == "Level2")
+        if (sceneName == "Level2")
         {
             lineRenderer.startColor = Color.white;
             lineRenderer.endColor = Color.white;
@@ -57,7 +61,7 @@ public class launcher : MonoBehaviour
             lineRenderer.startColor = Color.black;
             lineRenderer.endColor = Color.black;
         }
-        lineRenderer.sortingLayerName = "Default"; 
+        lineRenderer.sortingLayerName = "Default";
         lineRenderer.sortingOrder = 3; // Order in layer değerini 3 olarak ayarla
 
         lineRenderer.positionCount = trajectoryStepCount;

@@ -5,6 +5,9 @@ public class GameManager : MonoBehaviour
 {
     private bool gameIsOver = false;
 
+    public delegate void ChangeSceneEventHandler();
+    public static event ChangeSceneEventHandler OnChangeScene;
+
     public void ChangeScene()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -28,5 +31,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Hatalı sahne index'i!"); // Bu durumda bir hata varsa konsola hata mesajı yazdır
         }
+
+        OnChangeScene?.Invoke();
     }
 }

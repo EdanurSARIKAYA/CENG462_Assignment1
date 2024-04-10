@@ -4,6 +4,10 @@ public class ProjectileCollision : MonoBehaviour
 {
     public int damageAmount = 20; // Projectile'ın verdiği hasar miktarı
     private ScoreManager scoreManager;
+    private int wallCollisionCount = 0; // Counter for wall collisions
+
+    public delegate void CollisionEventHandler();
+    public static event CollisionEventHandler OnCollision;
 
     private void Start()
     {
@@ -33,6 +37,7 @@ public class ProjectileCollision : MonoBehaviour
             }
 
             Destroy(gameObject);
+            OnCollision?.Invoke();
         }
         else if (collision.gameObject.CompareTag("Enemy"))
         {
@@ -50,13 +55,25 @@ public class ProjectileCollision : MonoBehaviour
             }
 
             Destroy(gameObject);
+            OnCollision?.Invoke();
         }
         else if (collision.gameObject.CompareTag("Ground"))
         {
             // Zeminle çarpıştığında yok ol
             Destroy(gameObject);
+            OnCollision?.Invoke();
         }
+        else if (collision.gameObject.CompareTag("Wall"))
+        {
+            // Increment wall collision count
+            wallCollisionCount++;
 
-
+            // If this is the second collision with a wall, destroy the projectile
+            if (wallCollisionCount >= 2)
+            {
+                Destroy(gameObject);
+                OnCollision?.Invoke();
+            }
+        }
     }
 }
